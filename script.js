@@ -53,4 +53,4 @@ function removeFromCart(id){
     elem.style.marginTop = '0px';
     document.getElementById(`item${id}button`).innerText = "Buy";
     document.getElementById(`item${id}button`).setAttribute("onclick", `addToCart(${id})`);
-}
+};
