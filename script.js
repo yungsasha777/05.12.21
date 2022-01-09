@@ -37,12 +37,12 @@ function openCart() {
 
 function addToCart(id){
     let elem = document.getElementById(`item${id}`);
-    cart.append(elem);
+    cart.prepend(elem);
     elem.style.marginLeft = '15px';
     elem.style.marginTop = '15px';
     document.getElementById(`item${id}button`).innerText = "Remove";
     document.getElementById(`item${id}button`).setAttribute("onclick", `removeFromCart(${id})`);
-    cartList.unshift(`item${id}`);
+    cartList.unshift(id);
 };
 
 function removeFromCart(id){
